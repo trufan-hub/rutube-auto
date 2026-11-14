@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://epg.one/ru.xml.gz" x-tvg-url="https://epg.one/ru.xml.gz"
-# Generated (UTC): 2026-11-14 12:23; source: Dimonovich/TV
+# Generated (UTC): 2026-11-14 12:35; source: Dimonovich/TV
 # Note: channel EPG only works if the EPG provider actually has its schedule.
 #EXTINF:-1 tvg-id="rutube-bba3e5fd8fd3" tvg-name="Rutube TV" group-title="Rutube",Rutube TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
