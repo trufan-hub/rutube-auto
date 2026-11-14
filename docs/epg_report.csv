@@ -1,0 +1,170 @@
+﻿channel,tvg_id,epg_matched,method
+Rutube TV,rutube-bba3e5fd8fd3,no,no_verified_match
+Первый канал HD,146,yes,name_exact
+НТВ HD,162,yes,name_exact
+ТНТ HD,353,yes,name_exact
+ТНТ4 HD,1649,yes,name_exact
+Москва-24,334,yes,name_exact
+Пятница HD,1003,yes,name_exact
+ТВ3 HD,698,yes,name_exact
+2x2,323,yes,name_exact
+Суббота!,2288,yes,name_exact
+Ю,rutube-a995445a85b5,no,no_verified_match
+CGTN Русский,2268,yes,name_exact
+Нано ТВ,rutube-3db377f44c20,no,no_verified_match
+Охотник и рыболов,1681,yes,name_exact
+Документалки и шоу,rutube-68897a262c8f,no,no_verified_match
+Discovery Channel,325,yes,name_exact
+National Geographic,102,yes,name_exact
+TLC,425,yes,name_exact
+Загородный International,rutube-bae327e4781e,no,no_verified_match
+Тайна,2426,yes,name_exact
+Киножелезо,rutube-696cafaae86b,no,no_verified_match
+Кинолаффка,rutube-fd231ba7e8bc,no,no_verified_match
+Кино и Жизнь,rutube-7c3186dde9e2,no,no_verified_match
+Дорамы,rutube-a4accf810623,no,no_verified_match
+Индийские фильмы,rutube-069da8f50700,no,no_verified_match
+Турецкие фильмы,rutube-204e1f57844f,no,no_verified_match
+Латиноамериканские фильмы,rutube-3bf5315a994b,no,no_verified_match
+Фильмач,rutube-bea224a1f698,no,no_verified_match
+Детективы каждый день,rutube-29aa1d5c42b7,no,no_verified_match
+Фантастические фильмы,rutube-ec81bdc6e745,no,no_verified_match
+Экшн фильмы,rutube-5b9a1ac40498,no,no_verified_match
+Apple TV+Action Time,rutube-e5eab92a292b,no,no_verified_match
+Драматические фильмы,rutube-a4d4f4569440,no,no_verified_match
+Epic Media Love,rutube-79180c0976c3,no,no_verified_match
+Epic Media Plus,rutube-ceb640ffc247,no,no_verified_match
+Amazon Prime Video mans' club,rutube-40c4326f5daa,no,no_verified_match
+Amazon Prime Video Romance,rutube-d075cee9497b,no,no_verified_match
+Звездные войны,rutube-b3af29cc866b,no,no_verified_match
+Гарри Поттер,rutube-03854378afdd,no,no_verified_match
+Властелин колец,rutube-f1bec0653b22,no,no_verified_match
+Marvel,rutube-048c98059f4f,no,no_verified_match
+Вселенная DC,rutube-886eb5516635,no,no_verified_match
+Твой кинотеатр,rutube-0af8b675370d,no,no_verified_match
+HHQ,rutube-3afe5a3b2aef,no,no_verified_match
+Буряад ТВ,rutube-15366c0e3869,no,no_verified_match
+ОТС HD,rutube-6a74a65203cc,no,no_verified_match
+Союзный,2294,yes,name_exact
+Плюс минус 16,11371,yes,name_exact
+Сургут 86 FHD,6791,yes,name_exact
+Сургут 1 FHD,6792,yes,name_exact
+Барс,rutube-ce7e76e3f9b9,no,no_verified_match
+ЮУРГУ-ТВ,rutube-4bd2ea0dfb94,no,no_verified_match
+Югра,4640,yes,name_exact
+Крым 24,2474,yes,name_exact
+Липецкое время,5810,yes,name_exact
+Первоуральск ТВ,rutube-7a55a9e7310f,no,no_verified_match
+Лен ТВ 24,rutube-15eac16a5d44,no,no_verified_match
+4 канал (Екатеринбург),rutube-d8ca6cc16b1e,no,no_verified_match
+РГВК Дагестан,7710,yes,name_exact
+РБК,743,yes,name_exact
+Таврия,rutube-bea2fb86af63,no,no_verified_match
+41 Регион,rutube-50c42d1469e5,no,no_verified_match
+Вся Уфа,5722,yes,name_exact
+Мы,rutube-3ff4fda7fcc7,no,no_verified_match
+Ника ТВ,rutube-592d0ce10015,no,no_verified_match
+Среда,9083,yes,name_exact
+UTV,rutube-97abf8274c6c,no,no_verified_match
+Звезда,405,yes,name_exact
+Сангат,rutube-16d396891cf1,no,no_verified_match
+Волга,2468,yes,name_exact
+Илли ТВ,rutube-fe10d2eb3394,no,no_verified_match
+ЛТВ (Люберцы),rutube-e09b23ed43e8,no,no_verified_match
+Канал 78,rutube-b5420c68ad1e,no,no_verified_match
+Волга 24,6756,yes,name_exact
+Башкортостан 24,2291,yes,name_exact
+Абакан 24,5777,yes,name_exact
+Саратов 24,7693,yes,name_exact
+Липецк 24,rutube-40686764b275,no,no_verified_match
+Ариг Ус 24,rutube-b3641efe5438,no,no_verified_match
+ДОН 24,rutube-987741e6b862,no,no_verified_match
+АРИС 24,7708,yes,name_exact
+ВЕТТА 24,rutube-84aa6bd4e6ba,no,no_verified_match
+Мир 24,2078,yes,name_exact
+Мир,726,yes,name_exact
+Губерния 33,rutube-6dbf38175605,no,no_verified_match
+Рифей-ТВ,rutube-afef1dfdae57,no,no_verified_match
+ТМК,rutube-7840adc4b3b6,no,no_verified_match
+Мой мир,11050,yes,name_exact
+КРИК-ТВ,2032,yes,name_exact
+Своё ТВ Ставрополь,11704,yes,name_exact
+Вместе-РФ,2398,yes,name_exact
+Продвижение,2297,yes,name_exact
+Импульс Севера,rutube-ddd853e5d75d,no,no_verified_match
+Самотлор (Нижневартовск),rutube-59d64fbcb561,no,no_verified_match
+НТС (Иркутск),rutube-87edb0fa78f3,no,no_verified_match
+Евразия,rutube-2e47cf37660c,no,no_verified_match
+ТОЛК,2473,yes,name_exact
+ННТВ,rutube-853970467286,no,no_verified_match
+МТВ Волгоград,rutube-9e92c4431a9e,no,no_verified_match
+Енисей +4 (Орион),5819,yes,name_exact
+БСТ,2464,yes,name_exact
+Юрган,rutube-ba5e5df6e591,no,no_verified_match
+Царьград,rutube-85bd6b526799,no,no_verified_match
+Омск ТВ,rutube-73beca9bd847,no,no_verified_match
+ТБВ,11790,yes,name_exact
+Мир Белогорья,5830,yes,name_exact
+Ямал-Регион,9329,yes,name_exact
+БТВ,rutube-2c72f0f5f351,no,no_verified_match
+Магас,rutube-eae7851eeac5,no,no_verified_match
+Первый Ярославский,rutube-ba559108da75,no,no_verified_match
+ОТР,1000,yes,name_exact
+Истоки Орёл,rutube-e8759c9f84b7,no,no_verified_match
+360,2265,yes,name_exact
+Прима,rutube-ac472ec0994a,no,no_verified_match
+АСТВ,rutube-dccb7c048def,no,no_verified_match
+10 канал,rutube-71605ed6be40,no,no_verified_match
+Канал 12,rutube-d15203fad6a2,no,no_verified_match
+Спас,2141,yes,name_exact
+Наше Аниме,rutube-1a24af342d17,no,no_verified_match
+Рика и Морти,rutube-11a23b608225,no,no_verified_match
+Анимач,rutube-09f02fa91ed7,no,no_verified_match
+Мультимейшн,rutube-c4469b590bc2,no,no_verified_match
+Мультач,rutube-f06fb04cfa39,no,no_verified_match
+Радость моя,2287,yes,name_exact
+Мультаташечки,rutube-1f740fb77611,no,no_verified_match
+Смайлик ТВ,2442,yes,name_exact
+Солнце,7669,yes,name_exact
+Ключайка,rutube-1d9dd2b54fe0,no,no_verified_match
+Музыкальные клипы,rutube-bc24f441a0d2,no,no_verified_match
+Смотри Радио,rutube-3c61625dc861,no,no_verified_match
+Kronehit TV,rutube-0b6978df7351,no,no_verified_match
+Activa TV,rutube-94242fac778f,no,no_verified_match
+RU.TV,2277,yes,name_exact
+МузТВ,897,yes,name_exact
+ТНТ Music,680,yes,name_exact
+ММТВ,rutube-0d02a9f60ead,no,no_verified_match
+Now Rock,rutube-585f79238e79,no,no_verified_match
+МузСоюз,2413,yes,name_exact
+Record Супердискотека 90х,rutube-2eb4ad1c0d54,no,no_verified_match
+Record Big Hits,rutube-83abd9e0628a,no,no_verified_match
+Record Rock,rutube-ead5c1f10e53,no,no_verified_match
+Record Dance Radio,rutube-38889d5d9e4e,no,no_verified_match
+Record Russian Hits,rutube-ea2ca5c323ac,no,no_verified_match
+Record Гоп FM,rutube-19963437221d,no,no_verified_match
+Record Megamix,rutube-0615ec85cb1f,no,no_verified_match
+Record Russian Mix,rutube-3bc74f413669,no,no_verified_match
+Record Deep,rutube-cf7f1dcd30c7,no,no_verified_match
+Record Phonk,rutube-63a95f785d09,no,no_verified_match
+Record Chill House,rutube-30396310d4fb,no,no_verified_match
+Record Drum n Bass,rutube-5f30de6eec77,no,no_verified_match
+Record Chill-Out,rutube-524fa72b79bc,no,no_verified_match
+Record Techno by Innocence,rutube-309636c507ea,no,no_verified_match
+Record Trance,rutube-6b687590227b,no,no_verified_match
+VIVA Russia HD,rutube-a201a4e4ac00,no,no_verified_match
+Матч ТВ HD,2051,yes,name_exact
+NHL Network [US],4562,yes,name_exact
+TNT SPORTS 1 HD,rutube-d1350f0a74ca,no,no_verified_match
+Red Bull TV,6039,yes,name_exact
+NBA TV,3894,yes,name_exact
+SKY SPORTS CRICKET,rutube-7f052eed4377,no,no_verified_match
+Sky Sports Golf,rutube-9832aa9eb2dc,no,no_verified_match
+Sky Sports Premier League,rutube-8264f3b67eee,no,no_verified_match
+Sky Sports Racing,rutube-061ef0afaab1,no,no_verified_match
+Sky Sports Tennis,rutube-9eeccba800c6,no,no_verified_match
+Sports Grid,rutube-88fc58562b5e,no,no_verified_match
+TVS Classic Sports,rutube-95fabd6222ed,no,no_verified_match
+beIN SPORTS XTRA Español,rutube-b20729cbe03c,no,no_verified_match
+Волейбол,11428,yes,name_exact
+Unbeaten,rutube-c53a6fa5db5c,no,no_verified_match
