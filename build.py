@@ -325,8 +325,7 @@ def generate(
         )
 
     out = [
-        f'#EXTM3U url-tvg="{quote_attr(epg_url)}" '
-        f'x-tvg-url="{quote_attr(epg_url)}"',
+        f'#EXTM3U url-tvg="{quote_attr(epg_url)}"',
         '# Generated (UTC): '
         + datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M')
         + '; source: Dimonovich/TV',
