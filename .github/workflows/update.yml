@@ -1,5 +1,4 @@
-
-name: Refresh Rutube IPTV
+name: Refresh Rutube IPTV and publish Pages
 
 on:
   workflow_dispatch:
@@ -13,26 +12,60 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: rutube-pages
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - uses: actions/setup-python@v5
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Refresh current Rutube streams and EPG mappings
         run: python build.py
-      - name: Commit latest playlist and EPG match report
+
+      - name: Create playlist landing page
+        run: |
+          cat > docs/index.html <<'EOF'
+          <!doctype html>
+          <html lang="ru">
+          <head><meta charset="utf-8"><title>Rutube Auto</title></head>
+          <body><h1>Rutube Auto</h1><p><a href="rutube.m3u">Открыть M3U-плейлист</a></p></body>
+          </html>
+          EOF
+
+      - name: Commit updated playlist and EPG report
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/rutube.m3u docs/epg_report.csv
+          git add docs/rutube.m3u docs/epg_report.csv docs/index.html
           if ! git diff --cached --quiet; then
-            git commit -m 'Update Rutube streams and EPG IDs'
+            git commit -m 'Update Rutube streams and EPG mappings'
             git push
           fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
