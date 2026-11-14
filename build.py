@@ -24,12 +24,19 @@ from xml.etree import ElementTree as ET
 
 SOURCE = 'https://raw.githubusercontent.com/Dimonovich/TV/Dimonovich/FREE/TV'
 
-# IPTVX guide with EPG identifiers different from EPG.ONE.
-EPG_URL = 'https://iptvx.one/epg/epg.xml.gz'
-EPG_ALTERNATES = (
-    EPG_URL,
+# Two EPG sources confirmed working by the owner in Lazy IPTV.
+# Include BOTH URLs in the generated M3U to make TV-side EPG discovery automatic.
+EPG_URLS = (
     'https://iptvx.one/EPG',
-    'http://iptvx.one/epg/epg.xml.gz',
+    'http://epg.one/epg2.xml.gz',
+)
+EPG_URL = ','.join(EPG_URLS)
+# Alternate transport/endpoint URLs are used for fetching only.
+EPG_FEEDS = (
+    ('IPTVX', ('https://iptvx.one/EPG',
+               'https://iptvx.one/epg/epg.xml.gz')),
+    ('EPG.ONE', ('http://epg.one/epg2.xml.gz',
+                 'https://epg.one/epg2.xml.gz')),
 )
 
 UA = 'Mozilla/5.0 (compatible; RUTUBE-M3U-Updater/1.0)'
@@ -65,6 +72,17 @@ PREFERRED_IPTVX_IDS = {
     'пятница': 'piatnica',
     'суббота': 'super',
 }
+
+# EPG.ONE uses numeric channel IDs, unlike IPTVX.
+# All preferred IDs must pass verification against programmes in that exact feed.
+PREFERRED_EPG_ONE_IDS = {
+    'тнт': '353',
+    'тнт 4': '1649',
+    'первый канал': '146',
+    'нтв': '162',
+    'пятница': '1003',
+}
+
 
 
 def get_bytes(
@@ -245,34 +263,34 @@ def make_index(
 def epg_match(
     name: str,
     original: dict,
-    index: dict[str, set[str]],
-    valid: set[str],
+    guides: list,
     cached: dict[str, str]
 ):
-    upstream_id = original.get('tvg-id', '').strip()
+    """Match to an ID with current programmes in one of the advertised EPGs.
 
-    if upstream_id and upstream_id in valid:
-        return upstream_id, 'original_id'
-
-    preferred = PREFERRED_IPTVX_IDS.get(
-        normalize(name)
-    )
-
-    if preferred and preferred in valid:
-        return preferred, 'verified_iptvx_id'
-
-    queries = [
-        name,
-        original.get('tvg-name', '')
-    ]
-
-    for q in queries:
-        k = normalize(q)
-        ids = index.get(k, set()) if k else set()
-
-        if len(ids) == 1:
-            return next(iter(ids)), 'name_exact'
-
+    IDs are NOT interchangeable between providers: each candidate is validated
+    against the exact source's <programme channel="..."> values.
+    """
+    key = normalize(name)
+    for provider, index, scheduled in guides:
+        upstream_id = original.get('tvg-id', '').strip()
+        if upstream_id and upstream_id in scheduled:
+            return upstream_id, provider + ':original_id'
+        preferences = (
+            PREFERRED_IPTVX_IDS if provider == 'IPTVX'
+            else PREFERRED_EPG_ONE_IDS
+        )
+        preferred = preferences.get(key, '')
+        if preferred and preferred in scheduled:
+            return preferred, provider + ':verified_id'
+        for query in [name, original.get('tvg-name', '')]:
+            matches = index.get(normalize(query), set())
+            if len(matches) == 1:
+                return next(iter(matches)), provider + ':exact_name'
+    # When a feed is temporarily unreachable, keep an already verified ID.
+    prior = cached.get(key, '')
+    if prior:
+        return prior, 'cached_previous_match'
     return None, 'no_current_programme'
 
 
@@ -287,8 +305,7 @@ def quote_attr(s: str) -> str:
 
 def generate(
     source: str,
-    index: dict,
-    valid: set,
+    guides: list,
     epg_url: str,
     cached: dict | None = None
 ):
@@ -329,7 +346,7 @@ def generate(
         seen[normalize(name)] += 1
 
         ids, status = epg_match(
-            name, e['attrs'], index, valid, cached
+            name, e['attrs'], guides, cached
         )
 
         if ids:
@@ -398,55 +415,45 @@ def main():
             SOURCE, max_size=12_000_000
         ).decode('utf-8-sig', errors='replace')
 
-    index, valid = {}, set()
-    selected_epg_url = EPG_URL
-
-    if args.epg_file:
-        index, _, valid = make_index(
-            Path(args.epg_file).read_bytes()
-        )
-
-        if not valid:
-            raise RuntimeError(
-                'Provided EPG contains no current programmes'
-            )
-
-    else:
-        failures = []
-
-        for url in EPG_ALTERNATES:
+    guides = []
+    errors = []
+    for provider, urls in EPG_FEEDS:
+        for url in urls:
             try:
-                index, _, valid = make_index(
-                    get_bytes(url)
+                payload = (
+                    Path(args.epg_file).read_bytes()
+                    if args.epg_file and provider == 'IPTVX'
+                    else get_bytes(url)
                 )
-
-                if len(valid) >= 100:
-                    selected_epg_url = url
-                    print(
-                        f'IPTVX guide OK: {url}, '
-                        f'scheduled channel IDs: {len(valid)}'
+                index, _, scheduled = make_index(payload)
+                if len(scheduled) < 50:
+                    raise ValueError(
+                        f'Only {len(scheduled)} channels with current programmes'
                     )
-                    break
+                guides.append((provider, index, scheduled))
+                print(f'{provider} EPG OK: {len(scheduled)} scheduled IDs via {url}')
+                break
+            except (OSError, RuntimeError, ET.ParseError, ValueError) as exc:
+                errors.append(f'{provider} {url}: {exc}')
+                print(f'EPG warning: {provider} {url}: {exc}', file=sys.stderr)
+            if args.epg_file and provider == 'IPTVX':
+                break
 
-                failures.append(
-                    f'{url}: only {len(valid)} scheduled channels'
-                )
+    # Stop on total EPG failure, avoiding a bad playlist replacing the last
+    # published version. If one provider is down, the other still works.
+    if not guides:
+        raise RuntimeError('All EPG sources unavailable: ' + ' | '.join(errors))
 
-            except (
-                OSError, RuntimeError,
-                ET.ParseError, ValueError
-            ) as exc:
-                failures.append(f'{url}: {exc}')
-
-        else:
-            raise RuntimeError(
-                'IPTVX EPG unavailable; '
-                'preserving previous playlist. '
-                + ' | '.join(failures)
-            )
+    cached = {}
+    old_report = Path(args.report)
+    if old_report.exists():
+        with old_report.open('r', encoding='utf-8-sig', newline='') as handle:
+            for row in csv.DictReader(handle):
+                if row.get('epg_matched') == 'yes' and row.get('tvg_id'):
+                    cached[normalize(row['channel'])] = row['tvg_id']
 
     m3u, report, total, matched = generate(
-        source, index, valid, selected_epg_url
+        source, guides, EPG_URL, cached
     )
 
     outfile = Path(args.output)
@@ -475,7 +482,7 @@ def main():
         'channels': total,
         'matched_epg': matched,
         'no_epg': total - matched,
-        'epg_url': selected_epg_url,
+        'epg_urls': list(EPG_URLS),
         'generated_utc': datetime.now(
             timezone.utc
         ).isoformat()
