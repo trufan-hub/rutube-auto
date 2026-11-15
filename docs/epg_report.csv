@@ -5,6 +5,7 @@ Rutube TV,,no,no_current_programme
 ТНТ HD,tnt,yes,IPTVX:verified_id
 ТНТ4 HD,tnt4,yes,IPTVX:verified_id
 Москва-24,moskva-24,yes,IPTVX:exact_name
+Россия К,kultura,yes,IPTVX:exact_name
 Пятница HD,piatnica,yes,IPTVX:verified_id
 ТВ3 HD,tv3-ru,yes,IPTVX:exact_name
 2x2,2na2,yes,IPTVX:exact_name
@@ -12,6 +13,7 @@ Rutube TV,,no,no_current_programme
 Ю,yu,yes,IPTVX:exact_name
 CGTN Русский,cctv-ru,yes,IPTVX:exact_name
 Нано ТВ,,no,no_current_programme
+Вдох,,no,no_current_programme
 Охотник и рыболов,1681,yes,EPG.ONE:exact_name
 Документалки и шоу,,no,no_current_programme
 Discovery Channel,discovery-channel,yes,IPTVX:exact_name
