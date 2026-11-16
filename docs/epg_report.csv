@@ -1,172 +1,172 @@
 ﻿channel,tvg_id,epg_matched,method
-Rutube TV,,no,no_current_programme
-Первый канал HD,pervy,yes,IPTVX:verified_id
-НТВ HD,ntv,yes,IPTVX:verified_id
-ТНТ HD,tnt,yes,IPTVX:verified_id
-ТНТ4 HD,tnt4,yes,IPTVX:verified_id
-Москва-24,moskva-24,yes,IPTVX:exact_name
-Россия К,kultura,yes,IPTVX:exact_name
-Пятница HD,piatnica,yes,IPTVX:verified_id
-ТВ3 HD,tv3-ru,yes,IPTVX:exact_name
-2x2,2na2,yes,IPTVX:exact_name
-Суббота!,super,yes,IPTVX:verified_id
-Ю,yu,yes,IPTVX:exact_name
-CGTN Русский,cctv-ru,yes,IPTVX:exact_name
-Нано ТВ,,no,no_current_programme
-Вдох,,no,no_current_programme
-Охотник и рыболов,1681,yes,EPG.ONE:exact_name
-Документалки и шоу,,no,no_current_programme
-Discovery Channel,discovery-channel,yes,IPTVX:exact_name
-National Geographic,national-geographic,yes,IPTVX:exact_name
-TLC,tlc,yes,IPTVX:exact_name
-Загородный International,zagorodny-int,yes,IPTVX:exact_name
-Тайна,tayna,yes,IPTVX:exact_name
-Киножелезо,kinozelezo,yes,IPTVX:exact_name
-Кинолаффка,kinolaffka,yes,IPTVX:exact_name
-Кино и Жизнь,kino-i-zhizn,yes,IPTVX:exact_name
-Дорамы,,no,no_current_programme
-Индийские фильмы,,no,no_current_programme
-Турецкие фильмы,,no,no_current_programme
-Латиноамериканские фильмы,,no,no_current_programme
-Фильмач,,no,no_current_programme
-Детективы каждый день,,no,no_current_programme
-Фантастические фильмы,,no,no_current_programme
-Экшн фильмы,,no,no_current_programme
-Apple TV+Action Time,,no,no_current_programme
-Драматические фильмы,,no,no_current_programme
-Epic Media Love,epic-media-love,yes,IPTVX:exact_name
-Epic Media Plus,epic-media-plus,yes,IPTVX:exact_name
-Amazon Prime Video mans' club,,no,no_current_programme
-Amazon Prime Video Romance,,no,no_current_programme
-Звездные войны,,no,no_current_programme
-Гарри Поттер,,no,no_current_programme
-Властелин колец,,no,no_current_programme
-Marvel,,no,no_current_programme
-Вселенная DC,,no,no_current_programme
-Твой кинотеатр,,no,no_current_programme
-HHQ,,no,no_current_programme
-Буряад ТВ,buriaad,yes,IPTVX:exact_name
-ОТС HD,ots,yes,IPTVX:exact_name
-Союзный,tro,yes,IPTVX:exact_name
-Плюс минус 16,ruskorabl,yes,IPTVX:exact_name
-Сургут 86 FHD,86-surgut,yes,IPTVX:exact_name
-Сургут 1 FHD,6792,yes,EPG.ONE:exact_name
-Барс,bars,yes,IPTVX:exact_name
-ЮУРГУ-ТВ,,no,no_current_programme
-Югра,yugra,yes,IPTVX:exact_name
-Крым 24,krym24,yes,IPTVX:exact_name
-Липецкое время,lipeckoe-vremia,yes,IPTVX:exact_name
-Первоуральск ТВ,pervouralsk-tv,yes,IPTVX:exact_name
-Лен ТВ 24,lot-47,yes,IPTVX:exact_name
-4 канал (Екатеринбург),4kanal-piatnica,yes,IPTVX:exact_name
-РГВК Дагестан,rgvk-dagestan,yes,IPTVX:exact_name
-РБК,rbk,yes,IPTVX:exact_name
-Таврия,tavria,yes,IPTVX:exact_name
-41 Регион,41region,yes,IPTVX:exact_name
-Вся Уфа,vsia-ufa,yes,IPTVX:exact_name
-Мы,myy,yes,IPTVX:exact_name
-Ника ТВ,nika-tv,yes,IPTVX:exact_name
-Среда,,no,no_current_programme
-UTV,utv,yes,IPTVX:exact_name
-Звезда,zvezda,yes,IPTVX:exact_name
-Сангат,,no,no_current_programme
-Волга,volga,yes,IPTVX:exact_name
-Илли ТВ,,no,no_current_programme
-ЛТВ (Люберцы),ltv-lubercy,yes,IPTVX:exact_name
-Канал 78,78kanal,yes,IPTVX:exact_name
-Волга 24,vremia-n,yes,IPTVX:exact_name
-Башкортостан 24,bashkortostan24,yes,IPTVX:exact_name
-Абакан 24,abakan24,yes,IPTVX:exact_name
-Саратов 24,saratov-24,yes,IPTVX:exact_name
-Липецк 24,lipeck24,yes,IPTVX:exact_name
-Ариг Ус 24,arig-us-24,yes,IPTVX:exact_name
-ДОН 24,don-24,yes,IPTVX:exact_name
-АРИС 24,aris24,yes,IPTVX:exact_name
-ВЕТТА 24,vetta24,yes,IPTVX:exact_name
-Мир 24,mir-24,yes,IPTVX:exact_name
-Мир,mir,yes,IPTVX:exact_name
-Губерния 33,gubernia-33,yes,IPTVX:exact_name
-Рифей-ТВ,rifey-tv,yes,IPTVX:exact_name
-ТМК,,no,no_current_programme
-Мой мир,,no,no_current_programme
-КРИК-ТВ,krik-tv,yes,IPTVX:exact_name
-Своё ТВ Ставрополь,svoyo-tv-stavropol,yes,IPTVX:exact_name
-Вместе-РФ,vmeste-rf,yes,IPTVX:exact_name
-Продвижение,prodvizhenie,yes,IPTVX:exact_name
-Импульс Севера,,no,no_current_programme
-Самотлор (Нижневартовск),samotlor-nv,yes,IPTVX:exact_name
-НТС (Иркутск),nts-irkutsk,yes,IPTVX:exact_name
-Евразия,evrasia,yes,IPTVX:exact_name
-ТОЛК,tolk,yes,IPTVX:exact_name
-ННТВ,nntv,yes,IPTVX:exact_name
-МТВ Волгоград,mtv-volgograd,yes,IPTVX:exact_name
-Енисей +4 (Орион),5819,yes,EPG.ONE:exact_name
-БСТ,bst,yes,IPTVX:exact_name
-Юрган,yurgan,yes,IPTVX:exact_name
-Царьград,,no,no_current_programme
-Омск ТВ,omsk-tv,yes,IPTVX:exact_name
-ТБВ,,no,no_current_programme
-Мир Белогорья,mir-belogoria,yes,IPTVX:exact_name
-Ямал-Регион,yamal-region,yes,IPTVX:exact_name
-БТВ,,no,no_current_programme
-Магас,,no,no_current_programme
-Первый Ярославский,pervy-yaroslavsky,yes,IPTVX:exact_name
-ОТР,otr,yes,IPTVX:exact_name
-Истоки Орёл,,no,no_current_programme
-360,360-podmoskovie,yes,IPTVX:exact_name
-Прима,prima,yes,IPTVX:exact_name
-АСТВ,,no,no_current_programme
-10 канал,,no,no_current_programme
-Канал 12,,no,no_current_programme
-Спас,spas,yes,IPTVX:exact_name
-Наше Аниме,,no,no_current_programme
-Рика и Морти,,no,no_current_programme
-Анимач,,no,no_current_programme
-Мультимейшн,,no,no_current_programme
-Мультач,,no,no_current_programme
-Радость моя,radost-moya,yes,IPTVX:exact_name
-Мультаташечки,,no,no_current_programme
-Смайлик ТВ,smaylik-tv,yes,IPTVX:exact_name
-Солнце,solnce,yes,IPTVX:exact_name
-Ключайка,,no,no_current_programme
-Музыкальные клипы,,no,no_current_programme
-Смотри Радио,,no,no_current_programme
-Kronehit TV,,no,no_current_programme
-Activa TV,,no,no_current_programme
-RU.TV,ru-tv,yes,IPTVX:exact_name
-МузТВ,muztv,yes,IPTVX:exact_name
-ТНТ Music,tnt-music,yes,IPTVX:exact_name
-ММТВ,,no,no_current_programme
-Now Rock,now-rock,yes,IPTVX:exact_name
-МузСоюз,muzsoyuz,yes,IPTVX:exact_name
-Record Супердискотека 90х,,no,no_current_programme
-Record Big Hits,,no,no_current_programme
-Record Rock,,no,no_current_programme
-Record Dance Radio,,no,no_current_programme
-Record Russian Hits,,no,no_current_programme
-Record Гоп FM,,no,no_current_programme
-Record Megamix,,no,no_current_programme
-Record Russian Mix,,no,no_current_programme
-Record Deep,,no,no_current_programme
-Record Phonk,,no,no_current_programme
-Record Chill House,,no,no_current_programme
-Record Drum n Bass,,no,no_current_programme
-Record Chill-Out,,no,no_current_programme
-Record Techno by Innocence,,no,no_current_programme
-Record Trance,,no,no_current_programme
-VIVA Russia HD,viva-rus,yes,IPTVX:exact_name
-Матч ТВ HD,match-tv,yes,IPTVX:exact_name
-NHL Network [US],nhl-network-us,yes,IPTVX:exact_name
-TNT SPORTS 1 HD,,no,no_current_programme
-Red Bull TV,,no,no_current_programme
-NBA TV,nba-tv,yes,IPTVX:exact_name
-SKY SPORTS CRICKET,sky-sports-cricket,yes,IPTVX:exact_name
-Sky Sports Golf,sky-sports-golf,yes,IPTVX:exact_name
-Sky Sports Premier League,sky-sports-apl,yes,IPTVX:exact_name
-Sky Sports Racing,sky-sports-racing,yes,IPTVX:exact_name
-Sky Sports Tennis,sky-sports-tennis,yes,IPTVX:exact_name
-Sports Grid,,no,no_current_programme
-TVS Classic Sports,,no,no_current_programme
-beIN SPORTS XTRA Español,,no,no_current_programme
-Волейбол,voleybol,yes,IPTVX:exact_name
-Unbeaten,,no,no_current_programme
+Rutube TV,rtv.9ae8e8a6dc58bdad66190475f9872ecd,no,no_current_programme
+Первый канал HD,rtv.c58f502c7bb34a8fcdd976b221fca292,yes,IPTVX:verified_id
+НТВ HD,rtv.c37cd74192c6bc3d6cd6077c0c4fd686,yes,IPTVX:verified_id
+ТНТ HD,rtv.546602986e6a424d74d594876ddb3f04,yes,IPTVX:verified_id
+ТНТ4 HD,rtv.c801a7087e29a097192d74c270fbc6c1,yes,IPTVX:verified_id
+Москва-24,rtv.ca70d39eba2e8771358bbcb4bfbad860,yes,IPTVX:exact_name
+Россия К,rtv.d0c0d69362edfbe706cb82d973439bb5,yes,IPTVX:exact_name
+Пятница HD,rtv.9f87a9a0cecbe773be6fddcbd93585ac,yes,IPTVX:verified_id
+ТВ3 HD,rtv.7bf12d9c050f9a7ef3728db5730432ae,yes,IPTVX:exact_name
+2x2,rtv.392b4686b770bae2da6bf5ac4574add5,yes,IPTVX:exact_name
+Суббота!,rtv.310744c10a5809da38aa445c952976da,yes,IPTVX:verified_id
+Ю,rtv.5c9327074e25ca86f3111d4085cbbb65,yes,IPTVX:exact_name
+CGTN Русский,rtv.f785d738a845cc80658e887843a18ed9,yes,IPTVX:exact_name
+Нано ТВ,rtv.cf958b6c9ae4504be5fc2c1de358a017,no,no_current_programme
+Вдох,rtv.988ec7330fa38c8a1e5980ba7d02dbbe,no,no_current_programme
+Охотник и рыболов,rtv.1da5d92af8c55b16241f1eb12a27f00c,yes,EPG.ONE:exact_name
+Документалки и шоу,rtv.eddcc86d1dee0b5def546ea388eb38ea,no,no_current_programme
+Discovery Channel,rtv.6422d62f7e1f87bc3aec45b462cd89ea,yes,IPTVX:exact_name
+National Geographic,rtv.2619fc295c16585ef018041d88f14db0,yes,IPTVX:exact_name
+TLC,rtv.7c3d1a4cc0b4dff1176aa2dbb0b90000,yes,IPTVX:exact_name
+Загородный International,rtv.406973c72e9d0449feef05ef7811ad01,yes,IPTVX:exact_name
+Тайна,rtv.a11c890a0ec0730ad33bdaaf2d244e1a,yes,IPTVX:exact_name
+Киножелезо,rtv.4965b7b928c4a143d708ab424be01d37,yes,IPTVX:exact_name
+Кинолаффка,rtv.3b7d1499da9396462bfd17282d758d30,yes,IPTVX:exact_name
+Кино и Жизнь,rtv.09e51eefa939595a4ac67182c6fb3e4e,yes,IPTVX:exact_name
+Дорамы,rtv.5e3edd063411550ed6b67a8c0d7c96ea,no,no_current_programme
+Индийские фильмы,rtv.8b077d20877c0cd70b5bc4a090b9f37e,no,no_current_programme
+Турецкие фильмы,rtv.2814e12b4ef6c528967736441c2e2803,no,no_current_programme
+Латиноамериканские фильмы,rtv.4d06d4d152d087f3792a5b15dc729562,no,no_current_programme
+Фильмач,rtv.300560a65014ec501a25b1f79df9ad90,no,no_current_programme
+Детективы каждый день,rtv.e05401be60a9cc719fa7075b6e77b86d,no,no_current_programme
+Фантастические фильмы,rtv.54de765aeea96a73d23a24b4e2cab07d,no,no_current_programme
+Экшн фильмы,rtv.1786622e52a6864eb3fd66b83733fef5,no,no_current_programme
+Apple TV+Action Time,rtv.74bb437ef478a52f42198c50d4241dc7,no,no_current_programme
+Драматические фильмы,rtv.680dfe110840cf882437082b948578d6,no,no_current_programme
+Epic Media Love,rtv.21f3993ed8291b70208aa06c982c731f,yes,IPTVX:exact_name
+Epic Media Plus,rtv.0ed0696149c131d3a7349372d730d4e6,yes,IPTVX:exact_name
+Amazon Prime Video mans' club,rtv.99f8f1d827641b766de62fe9023642fa,no,no_current_programme
+Amazon Prime Video Romance,rtv.7758ac4d77fac95e187144ee2c8b368d,no,no_current_programme
+Звездные войны,rtv.dcd36c7833f9431e6e6c902515c6c3ac,no,no_current_programme
+Гарри Поттер,rtv.f6a3656e5ef574982994ddf2e5003341,no,no_current_programme
+Властелин колец,rtv.6f99d2a36810a41acc8f66af25441ae3,no,no_current_programme
+Marvel,rtv.3abeb7577fd38ac4b8130bb8e03418f2,no,no_current_programme
+Вселенная DC,rtv.31cd70d4054fbbde3b169d9a6972515c,no,no_current_programme
+Твой кинотеатр,rtv.e08e513c4e33f52fce3a975b5cb6932c,no,no_current_programme
+HHQ,rtv.2d7fa51716500fba52586d594201777f,no,no_current_programme
+Буряад ТВ,rtv.55fec7f2c11f4decc66568fca39f26b2,yes,IPTVX:exact_name
+ОТС HD,rtv.39c5bfe012402990e6402eded8bdc761,yes,IPTVX:exact_name
+Союзный,rtv.46c03b7f1a7255326900f4a60a9b44e0,yes,IPTVX:exact_name
+Плюс минус 16,rtv.99d4597cea881a27cf7dd6e65a74dade,yes,IPTVX:exact_name
+Сургут 86 FHD,rtv.813dc0c5a944559e7e52b840d09a84f6,yes,IPTVX:exact_name
+Сургут 1 FHD,rtv.7a35d5186515db85144d86900ebe1daf,yes,EPG.ONE:exact_name
+Барс,rtv.f79ff24ad16cf5f5eb52994647596d13,yes,IPTVX:exact_name
+ЮУРГУ-ТВ,rtv.f6160b4e48cb32b4d5438c66c83b69dc,no,no_current_programme
+Югра,rtv.360eabf2bf139f0a97b971c4b92d09b6,yes,IPTVX:exact_name
+Крым 24,rtv.cf71a03fba2c98f47a539e0e39b9d333,yes,IPTVX:exact_name
+Липецкое время,rtv.23afd7debed1cfc7a8efa0827c24d836,yes,IPTVX:exact_name
+Первоуральск ТВ,rtv.59e0373a9aa587e06aeaf9009f86ded1,yes,IPTVX:exact_name
+Лен ТВ 24,rtv.dd022de9cc6c8af89409513fa0a6117a,yes,IPTVX:exact_name
+4 канал (Екатеринбург),rtv.c6f66b644424c117f41e48062719ceed,yes,IPTVX:exact_name
+РГВК Дагестан,rtv.fcafa0d358df671e4f7c61ca54c79bea,yes,IPTVX:exact_name
+РБК,rtv.75957f55ed1e9b4e0ec00f8dd9594fcc,yes,IPTVX:exact_name
+Таврия,rtv.a969ca8279415378bc8abd345fcfded9,yes,IPTVX:exact_name
+41 Регион,rtv.aff0a2b356d2e1eef55bdb868be4dcc3,yes,IPTVX:exact_name
+Вся Уфа,rtv.5a88a8d75565c5cdebeb11d87bfc61e9,yes,IPTVX:exact_name
+Мы,rtv.ee431650738a594119c3516ceda72775,yes,IPTVX:exact_name
+Ника ТВ,rtv.37d722b7752cd193a3f94d71cc9d60f5,yes,IPTVX:exact_name
+Среда,rtv.5fa486bf465c8735fff9f41b372610cc,no,no_current_programme
+UTV,rtv.673b559e08f8b99d65a4e8fbbceb911b,yes,IPTVX:exact_name
+Звезда,rtv.5ab908fccfac5bb43ef2b1e4182256b0,yes,IPTVX:exact_name
+Сангат,rtv.dce1080977de5e89dcbd1dd24d014b4e,no,no_current_programme
+Волга,rtv.bed2dcda74004e4e9a61966d2848c027,yes,IPTVX:exact_name
+Илли ТВ,rtv.eda2da42eea89951e4135141a30915f7,no,no_current_programme
+ЛТВ (Люберцы),rtv.067561b5754d0b7844762fa92939716b,yes,IPTVX:exact_name
+Канал 78,rtv.bbf23277dbd0dd0e6a623526d4c3f8c9,yes,IPTVX:exact_name
+Волга 24,rtv.e30732c0045af997cb7312822534522f,yes,IPTVX:exact_name
+Башкортостан 24,rtv.cf7e6ad2c24ce743b5b60478c176037b,yes,IPTVX:exact_name
+Абакан 24,rtv.7c5ae60686a94e04691f6917e1dec066,yes,IPTVX:exact_name
+Саратов 24,rtv.e07fffc5eb21f98a5ade09e825d7095a,yes,IPTVX:exact_name
+Липецк 24,rtv.b04fc212802bbf7ec94768c029e54aa9,yes,IPTVX:exact_name
+Ариг Ус 24,rtv.5d9273a93631b87a3bbdc883bb3a58cb,yes,IPTVX:exact_name
+ДОН 24,rtv.72ced5d533f940251e5e4bd5d61f6bc9,yes,IPTVX:exact_name
+АРИС 24,rtv.9b482361d6c845f7d70eafc98356d8bf,yes,IPTVX:exact_name
+ВЕТТА 24,rtv.3053eeaecc60e0adef57b81d3498fdd0,yes,IPTVX:exact_name
+Мир 24,rtv.43269ba8fb179e298b1e497f557e8d2d,yes,IPTVX:exact_name
+Мир,rtv.afef67d151b5a607dee1ef0aa299a52c,yes,IPTVX:exact_name
+Губерния 33,rtv.52a1592710d8803b0570bfef9d2fbeff,yes,IPTVX:exact_name
+Рифей-ТВ,rtv.57486bf8e1c01d16a5a939c463867fab,yes,IPTVX:exact_name
+ТМК,rtv.740503607d216b5d467694a1e8fb39a8,no,no_current_programme
+Мой мир,rtv.0064bd09060c8b8469fef19f269e8a8a,no,no_current_programme
+КРИК-ТВ,rtv.f372aa2aff09518d050ecdf70956012c,yes,IPTVX:exact_name
+Своё ТВ Ставрополь,rtv.1932f750f00f3a742a1d90c62d0076ad,yes,IPTVX:exact_name
+Вместе-РФ,rtv.f6a6d5c955180d0d0f80c66d0b6150d3,yes,IPTVX:exact_name
+Продвижение,rtv.ff5c11c9a51750f5d33427762abc315c,yes,IPTVX:exact_name
+Импульс Севера,rtv.342a3e4f3c9bb0d7830a52af0d956c44,no,no_current_programme
+Самотлор (Нижневартовск),rtv.695f0fdefc96b6f7f2b4a311b71f596b,yes,IPTVX:exact_name
+НТС (Иркутск),rtv.b4c501ea4129408a3c195f9ae4359c0e,yes,IPTVX:exact_name
+Евразия,rtv.ce34005d3db841e15eecb7e31749adf6,yes,IPTVX:exact_name
+ТОЛК,rtv.0115cdc35fb5234242a89de98137dca9,yes,IPTVX:exact_name
+ННТВ,rtv.333f94ef9af118c0ac51006243053e07,yes,IPTVX:exact_name
+МТВ Волгоград,rtv.1839496ed8242ed47f5c540e25d4ba3f,yes,IPTVX:exact_name
+Енисей +4 (Орион),rtv.5835cd10c04311e400f2ed19b1b2fe8b,yes,EPG.ONE:exact_name
+БСТ,rtv.92aa15b4975d9f63c4e0b82e3b7af463,yes,IPTVX:exact_name
+Юрган,rtv.601ca3d760de90391c18772e43d5190e,yes,IPTVX:exact_name
+Царьград,rtv.91815da4edb167b5bd617bae490e57da,no,no_current_programme
+Омск ТВ,rtv.9927a61345cbec5aac6558f6c5454d61,yes,IPTVX:exact_name
+ТБВ,rtv.68b2533a29f7de163842baf1b9dfc17e,no,no_current_programme
+Мир Белогорья,rtv.31bd9a668e5dfe5feddb988c96c0998c,yes,IPTVX:exact_name
+Ямал-Регион,rtv.c0de1d61969a7fbdf6c68ca0b8a67769,yes,IPTVX:exact_name
+БТВ,rtv.671239d68ada3000a154a68efa0c7813,no,no_current_programme
+Магас,rtv.15bb032337c7425983757d211713eb7d,no,no_current_programme
+Первый Ярославский,rtv.b7d879feefadde4e04e516dde89012cd,yes,IPTVX:exact_name
+ОТР,rtv.faa934385b83f9e8a92f5484defae5fa,yes,IPTVX:exact_name
+Истоки Орёл,rtv.503a8ac5ca6d738f05a147764f70215b,no,no_current_programme
+360,rtv.07beff61e617797db550cc3a5f6ad92b,yes,IPTVX:exact_name
+Прима,rtv.3fd26103b82508289ef7b7f60c77d9c8,yes,IPTVX:exact_name
+АСТВ,rtv.df0faa92ca3f1d7df057c202fd4b21c4,no,no_current_programme
+10 канал,rtv.c9e26bf5c003fd8d477200065ca1a05f,no,no_current_programme
+Канал 12,rtv.7d6d8c8fc5c6e02d9c0b78eb451f3bd0,no,no_current_programme
+Спас,rtv.2bbfa9ebf9d79ade480d7281fcef1008,yes,IPTVX:exact_name
+Наше Аниме,rtv.ec5267347fa50d03edba227906eba679,no,no_current_programme
+Рика и Морти,rtv.478a825bfd784e1e9de08ceceb3d2121,no,no_current_programme
+Анимач,rtv.b3019a8983105f5e33f038246f860c32,no,no_current_programme
+Мультимейшн,rtv.bc2933d28daf33f5a68257ebc72787cd,no,no_current_programme
+Мультач,rtv.76de13007ff82a001f786f148e9fd39a,no,no_current_programme
+Радость моя,rtv.9ad2099eed71b4a0e577292c3bfd0708,yes,IPTVX:exact_name
+Мультаташечки,rtv.25a96d214a176541fba1d342ac760ee9,no,no_current_programme
+Смайлик ТВ,rtv.2f052691c75d72b3ed7f3c33ea956a41,yes,IPTVX:exact_name
+Солнце,rtv.2dba20a8405e57935827cb5721c2b759,yes,IPTVX:exact_name
+Ключайка,rtv.ed497bdb28846536f3928849f8f7e469,no,no_current_programme
+Музыкальные клипы,rtv.e7e04192431a24a750fd8704fa221461,no,no_current_programme
+Смотри Радио,rtv.18eda61a347b781dd765b410133ef33a,no,no_current_programme
+Kronehit TV,rtv.bc1b811349f526188c839d377913e16a,no,no_current_programme
+Activa TV,rtv.8e9da41366fcb497aaeade579f0d715f,no,no_current_programme
+RU.TV,rtv.b1eb8e90d7e636677b3eb73b4fcbb717,yes,IPTVX:exact_name
+МузТВ,rtv.df6fe73494a26f74da51573fd97b9baa,yes,IPTVX:exact_name
+ТНТ Music,rtv.5a294ae1ed12c44c7053301fb5fa9ba0,yes,IPTVX:exact_name
+ММТВ,rtv.965a025e4ebbaf0957415f80c6de8534,no,no_current_programme
+Now Rock,rtv.047ba54d846ee185b4209a797a2ae138,yes,IPTVX:exact_name
+МузСоюз,rtv.d1dff14680d4c84e27908983375f7e89,yes,IPTVX:exact_name
+Record Супердискотека 90х,rtv.351f0e84a7db69a73658bbf61debcf62,no,no_current_programme
+Record Big Hits,rtv.c7b8a6f89c95f9d224d7811d4489d5f7,no,no_current_programme
+Record Rock,rtv.a1bad1d3fee40a92df8f3d8d3de16821,no,no_current_programme
+Record Dance Radio,rtv.21675e5154442266a0c154f168a6b019,no,no_current_programme
+Record Russian Hits,rtv.b5f4e1d43e11888455a0a66f0872e77b,no,no_current_programme
+Record Гоп FM,rtv.b575eaf54bd00d5fb079c55988bc0f24,no,no_current_programme
+Record Megamix,rtv.60b73481dcc9880850f22690142c8d17,no,no_current_programme
+Record Russian Mix,rtv.2f3e5c6a66617c063f12d8d5d49248c7,no,no_current_programme
+Record Deep,rtv.9249feec1c78e5414f68ecf40a6645d2,no,no_current_programme
+Record Phonk,rtv.f972da70f03eee3d14fcff4113a8b6e4,no,no_current_programme
+Record Chill House,rtv.149b862a6f45faed8800e28c15066c21,no,no_current_programme
+Record Drum n Bass,rtv.dc756dfadfdb320e9cec39b35def79e3,no,no_current_programme
+Record Chill-Out,rtv.6ad623fe9b908f3823c47e77cd981cd4,no,no_current_programme
+Record Techno by Innocence,rtv.a385dcd78395ea7740d1aed28980fe6c,no,no_current_programme
+Record Trance,rtv.26aeb9043f519687846255556ee891aa,no,no_current_programme
+VIVA Russia HD,rtv.f712ae5ff3db23ec09b3674133d44daa,yes,IPTVX:exact_name
+Матч ТВ HD,rtv.11bbbec75a2ceb8cf446ad16813c6eec,yes,IPTVX:exact_name
+NHL Network [US],rtv.7a485ef5da9fe50ba939f36ca3e6ed96,yes,IPTVX:exact_name
+TNT SPORTS 1 HD,rtv.3aa782bace452e7c4b9f81d767512147,no,no_current_programme
+Red Bull TV,rtv.45b30eef1b89857182b03db2c25631d9,no,no_current_programme
+NBA TV,rtv.d01241e9fd2bc2d65dbf6d74cca02f89,yes,IPTVX:exact_name
+SKY SPORTS CRICKET,rtv.7c13a51576b9ff2601f08f5d57dd5169,yes,IPTVX:exact_name
+Sky Sports Golf,rtv.a7a17d6b994f02a80aebd69435266b58,yes,IPTVX:exact_name
+Sky Sports Premier League,rtv.e5bacac3b8e730791d4cab20ae81cd8f,yes,IPTVX:exact_name
+Sky Sports Racing,rtv.362d68a2d5d5b48dbf23522573e64d57,yes,IPTVX:exact_name
+Sky Sports Tennis,rtv.5f5dc9d64b43dfc740e92f2bdf2b0d38,yes,IPTVX:exact_name
+Sports Grid,rtv.afc3073ec3efc6cb70c88ce6acaf4344,no,no_current_programme
+TVS Classic Sports,rtv.9f28acb802549828d3ce7fbd8ecc17d3,no,no_current_programme
+beIN SPORTS XTRA Español,rtv.05550e441b09aeec53e60de66b6c47bf,no,no_current_programme
+Волейбол,rtv.cc1b56aa4955a144f324ad58998513bb,yes,IPTVX:exact_name
+Unbeaten,rtv.efc2833169ec20a3ea61197714bea6ab,no,no_current_programme
