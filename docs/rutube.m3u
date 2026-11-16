@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://iptvx.one/EPG,http://epg.one/epg2.xml.gz"
-# Generated (UTC): 2026-11-15 18:48; source: Dimonovich/TV
+# Generated (UTC): 2026-11-16 01:26; source: Dimonovich/TV
 # EPG requires a matching programme in the provider feed.
 #EXTINF:-1 tvg-id="" tvg-name="Rutube TV" group-title="Rutube",Rutube TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
