@@ -30,7 +30,7 @@ EPG_URLS = (
     'https://iptvx.one/EPG',
     'http://epg.one/epg2.xml.gz',
 )
-EPG_URL = ','.join(EPG_URLS)
+EPG_URL = 'https://trufan-hub.github.io/rutube-auto/guide.xml'
 # Alternate transport/endpoint URLs are used for fetching only.
 EPG_FEEDS = (
     ('IPTVX', ('https://iptvx.one/EPG',
@@ -351,7 +351,12 @@ def generate(
         if ids:
             count_matched += 1
 
-        effective_id = ids or ''
+        # Our own unique tvg-id: the local XMLTV generator uses the same
+        # stable Rutube stream identifier, never third-party EPG IDs.
+        stream_id = re.search(r'/livestream/([0-9a-f]{32})/', e['url'])
+        if not stream_id:
+            raise ValueError(f'No stable Rutube stream ID: {name}')
+        effective_id = 'rtv.' + stream_id.group(1)
         logo = e['attrs'].get('tvg-logo', '')
 
         fields = [
