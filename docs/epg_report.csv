@@ -34,7 +34,7 @@ TLC,tlc,yes,IPTVX:exact_name
 Экшн фильмы,,no,no_current_programme
 Apple TV+Action Time,,no,no_current_programme
 Драматические фильмы,,no,no_current_programme
-Epic Media Love,epic-media-love,yes,cached_previous_match
+Epic Media Love,epic-media-love,yes,IPTVX:exact_name
 Epic Media Plus,epic-media-plus,yes,IPTVX:exact_name
 Amazon Prime Video mans' club,,no,no_current_programme
 Amazon Prime Video Romance,,no,no_current_programme
