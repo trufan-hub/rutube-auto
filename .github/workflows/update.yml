@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - build.py
+      - build_epg.py
       - .github/workflows/update.yml
 
 permissions:
@@ -17,7 +18,7 @@ permissions:
 
 concurrency:
   group: rutube-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   update:
@@ -38,6 +39,9 @@ jobs:
       - name: Refresh current Rutube streams and EPG mappings
         run: python build.py
 
+      - name: Generate dedicated Rutube XMLTV EPG
+        run: python build_epg.py
+
       - name: Create playlist landing page
         run: |
           cat > docs/index.html <<'EOF'
@@ -52,10 +56,12 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/rutube.m3u docs/epg_report.csv docs/index.html
+          git add docs/rutube.m3u docs/epg_report.csv docs/index.html docs/guide.xml docs/guide.xml.gz docs/epg_status.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update Rutube streams and EPG mappings'
-            git push
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           fi
 
       - name: Configure GitHub Pages
