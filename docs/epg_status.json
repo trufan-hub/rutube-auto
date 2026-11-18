@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-18T13:16:54.930215+00:00",
+  "updated_at": "2026-11-18T18:58:55.238870+00:00",
   "catalog_channels": 172,
   "guide_channels": 102,
-  "programmes": 23857,
-  "compressed_bytes": 311399,
-  "uncompressed_bytes": 4581142,
+  "programmes": 23855,
+  "compressed_bytes": 311370,
+  "uncompressed_bytes": 4580747,
   "feeds": {
     "IPTVX": {
       "url": "https://iptvx.one/EPG",
