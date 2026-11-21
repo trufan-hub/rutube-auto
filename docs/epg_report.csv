@@ -25,20 +25,26 @@ TLC,rtv.7c3d1a4cc0b4dff1176aa2dbb0b90000,yes,IPTVX:exact_name
 Киножелезо,rtv.4965b7b928c4a143d708ab424be01d37,yes,IPTVX:exact_name
 Кинолаффка,rtv.3b7d1499da9396462bfd17282d758d30,yes,IPTVX:exact_name
 Кино и Жизнь,rtv.09e51eefa939595a4ac67182c6fb3e4e,yes,IPTVX:exact_name
+Мелодрамы,rtv.73cbe695b3c624629c2ff056e38ead75,no,no_current_programme
 Дорамы,rtv.5e3edd063411550ed6b67a8c0d7c96ea,no,no_current_programme
+Фэнтези фильмы,rtv.40fce8bc38735c864c0369228a72e59b,no,no_current_programme
+Триллеры фильмы,rtv.f7c1387e288223779b2b53937843233a,no,no_current_programme
+Ужасы фильмы,rtv.1e74326173960505fb60f107e132fe6f,no,no_current_programme
+Криминальные фильмы,rtv.87d8eb5aac1c9edae08717331f2adf3a,no,no_current_programme
+Фантастические фильмы,rtv.54de765aeea96a73d23a24b4e2cab07d,no,no_current_programme
+Экшн фильмы,rtv.1786622e52a6864eb3fd66b83733fef5,no,no_current_programme
+Комедийные фильмы,rtv.7758ac4d77fac95e187144ee2c8b368d,no,no_current_programme
+Приключенческие фильмы,rtv.202d41c36b5ed9245216f5288be3a235,no,no_current_programme
 Индийские фильмы,rtv.8b077d20877c0cd70b5bc4a090b9f37e,no,no_current_programme
 Турецкие фильмы,rtv.2814e12b4ef6c528967736441c2e2803,no,no_current_programme
 Латиноамериканские фильмы,rtv.4d06d4d152d087f3792a5b15dc729562,no,no_current_programme
-Фильмач,rtv.300560a65014ec501a25b1f79df9ad90,no,no_current_programme
 Детективы каждый день,rtv.e05401be60a9cc719fa7075b6e77b86d,no,no_current_programme
-Фантастические фильмы,rtv.54de765aeea96a73d23a24b4e2cab07d,no,no_current_programme
-Экшн фильмы,rtv.1786622e52a6864eb3fd66b83733fef5,no,no_current_programme
+Фильмач,rtv.300560a65014ec501a25b1f79df9ad90,no,no_current_programme
 Apple TV+Action Time,rtv.74bb437ef478a52f42198c50d4241dc7,no,no_current_programme
 Драматические фильмы,rtv.680dfe110840cf882437082b948578d6,no,no_current_programme
 Epic Media Love,rtv.21f3993ed8291b70208aa06c982c731f,yes,IPTVX:exact_name
 Epic Media Plus,rtv.0ed0696149c131d3a7349372d730d4e6,yes,IPTVX:exact_name
 Amazon Prime Video mans' club,rtv.99f8f1d827641b766de62fe9023642fa,no,no_current_programme
-Amazon Prime Video Romance,rtv.7758ac4d77fac95e187144ee2c8b368d,no,no_current_programme
 Звездные войны,rtv.dcd36c7833f9431e6e6c902515c6c3ac,no,no_current_programme
 Гарри Поттер,rtv.f6a3656e5ef574982994ddf2e5003341,no,no_current_programme
 Властелин колец,rtv.6f99d2a36810a41acc8f66af25441ae3,no,no_current_programme
@@ -123,7 +129,7 @@ UTV,rtv.673b559e08f8b99d65a4e8fbbceb911b,yes,IPTVX:exact_name
 Наше Аниме,rtv.ec5267347fa50d03edba227906eba679,no,no_current_programme
 Рика и Морти,rtv.478a825bfd784e1e9de08ceceb3d2121,no,no_current_programme
 Анимач,rtv.b3019a8983105f5e33f038246f860c32,no,no_current_programme
-Мультимейшн,rtv.bc2933d28daf33f5a68257ebc72787cd,no,no_current_programme
+Мультимейшин,rtv.bc2933d28daf33f5a68257ebc72787cd,no,no_current_programme
 Мультач,rtv.76de13007ff82a001f786f148e9fd39a,no,no_current_programme
 Радость моя,rtv.9ad2099eed71b4a0e577292c3bfd0708,yes,IPTVX:exact_name
 Мультаташечки,rtv.25a96d214a176541fba1d342ac760ee9,no,no_current_programme
