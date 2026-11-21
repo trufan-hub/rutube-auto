@@ -9,6 +9,8 @@ on:
     paths:
       - build.py
       - build_epg.py
+      - logo_cache.py
+      - check_release.py
       - .github/workflows/update.yml
 
 permissions:
@@ -42,6 +44,11 @@ jobs:
       - name: Generate dedicated Rutube XMLTV EPG
         run: python build_epg.py
 
+      - name: Validate release contract (EPG, logos, stream IDs)
+        run: |
+          python -m py_compile build.py build_epg.py logo_cache.py check_release.py
+          python check_release.py
+
       - name: Create playlist landing page
         run: |
           cat > docs/index.html <<'EOF'
@@ -56,7 +63,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/rutube.m3u docs/epg_report.csv docs/index.html docs/guide.xml docs/guide.xml.gz docs/epg_status.json
+          git add docs/rutube.m3u docs/epg_report.csv docs/index.html docs/guide.xml docs/guide.xml.gz docs/epg_status.json docs/logos.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update Rutube streams and EPG mappings'
             git fetch origin main
