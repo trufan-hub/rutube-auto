@@ -14,6 +14,7 @@ from urllib.parse import urlsplit
 
 REGISTRY = Path("docs/logos.json")
 ID = re.compile(r'\btvg-id="(rtv\.[0-9a-f]{32})"')
+KEY = re.compile(r'^rtv\.[0-9a-f]{32}$')
 LOGO = re.compile(r'\s+tvg-logo="([^"]*)"')
 
 
@@ -35,7 +36,7 @@ def read_registry():
     entries = json.loads(REGISTRY.read_text(encoding="utf-8"))
     if not isinstance(entries, dict):
         raise ValueError("Logo registry must be an object")
-    if any(not ID.fullmatch(k) or not safe_logo_url(v)
+    if any(not KEY.fullmatch(k) or not safe_logo_url(v)
            for k, v in entries.items()):
         raise ValueError("Invalid logo registry item")
     return entries
@@ -57,7 +58,7 @@ def merge_logos(upstream, playlist_paths):
             if match and logo and safe_logo_url(logo.group(1)):
                 result.setdefault(match.group(1), unescape(logo.group(1)))
     for channel_id, url in upstream.items():
-        if ID.fullmatch(channel_id) and safe_logo_url(url):
+        if KEY.fullmatch(channel_id) and safe_logo_url(url):
             result.setdefault(channel_id, unescape(url))
     return result, existing_count
 
