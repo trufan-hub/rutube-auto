@@ -16,6 +16,7 @@ import unicodedata
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
@@ -131,6 +132,7 @@ def parse_provider(stream, channels, utc_date, provider):
     end_day = (utc_date + timedelta(days=4)).strftime("%Y%m%d")
     selected_source_ids = {}
     found_programmes = defaultdict(list)
+    found_icons = {}
     total_channels = 0
     context = ET.iterparse(stream, events=("start", "end"))
     event, root = next(context)
@@ -153,6 +155,15 @@ def parse_provider(stream, channels, utc_date, provider):
                         candidates[own_id(ch)] = ch
                 if len(candidates) == 1:
                     selected_source_ids[cid] = next(iter(candidates))
+            target = selected_source_ids.get(cid)
+            if target:
+                for ico in el.findall("icon"):
+                    address = (ico.get("src") or "").strip()
+                    parsed = urlsplit(address)
+                    if (parsed.scheme == "https" and parsed.hostname
+                            and not parsed.username and len(address) < 1000):
+                        found_icons[target] = address
+                        break
             el.clear()
             root.clear()
         elif el.tag == "programme":
@@ -170,21 +181,24 @@ def parse_provider(stream, channels, utc_date, provider):
                     )
             el.clear()
             root.clear()
-    return found_programmes, total_channels
+    return found_programmes, total_channels, found_icons
 
 
 def main():
     channels = load_catalog()
     now = datetime.now(timezone.utc)
     combined = {}
+    logos = {}
     sources = {}
     errors = []
     for label, mirrors in FEEDS:
         for url in mirrors:
             try:
-                programmes, count = parse_url(url, channels, now.date(), label)
+                programmes, count, feed_icons = parse_url(url, channels, now.date(), label)
                 if count < 50:
                     raise ValueError("Too few channels in provider XMLTV")
+                for cid, image_url in feed_icons.items():
+                    logos.setdefault(cid, image_url)
                 added = 0
                 for cid, entries in programmes.items():
                     if cid not in combined and entries:
@@ -219,6 +233,8 @@ def main():
         el = ET.SubElement(tv, "channel", {"id": ident})
         name = ET.SubElement(el, "display-name", {"lang": "ru"})
         name.text = channel["name"]
+        if ident in logos:
+            ET.SubElement(el, "icon", {"src": logos[ident]})
     for cid, entries in combined.items():
         seen = set()
         for start, stop, title, lang in sorted(entries):
@@ -242,11 +258,29 @@ def main():
     # Publish both XMLTV transports: plain XML maximizes TV-player compatibility.
     Path("docs/guide.xml").write_bytes(document)
     OUTPUT.write_bytes(gzip.compress(document, compresslevel=8, mtime=0))
+    # Add matching logo URLs to M3U, not just XMLTV: more reliable for TVs.
+    m3u_path = Path("docs/rutube.m3u")
+    raw_lines = m3u_path.read_text(encoding="utf-8").splitlines()
+    added_logos = 0
+    for idx, line in enumerate(raw_lines):
+        if not line.startswith("#EXTINF:") or "tvg-logo=" in line:
+            continue
+        found = re.search(r'tvg-id="(rtv\.[0-9a-f]{32})"', line)
+        logo_url = logos.get(found.group(1)) if found else None
+        if logo_url:
+            before, sep, after = line.partition(",")
+            if sep:
+                raw_lines[idx] = before + ' tvg-logo="' + logo_url + '",' + after
+                added_logos += 1
+    if added_logos:
+        m3u_path.write_text("\n".join(raw_lines) + "\n", encoding="utf-8")
     report = {
         "updated_at": now.isoformat(),
         "catalog_channels": len(channels),
         "guide_channels": len(combined),
         "programmes": len(parsed.findall("programme")),
+        "provider_logo_count": len(logos),
+        "added_to_m3u": added_logos,
         "compressed_bytes": OUTPUT.stat().st_size,
         "uncompressed_bytes": Path("docs/guide.xml").stat().st_size,
         "feeds": sources,
