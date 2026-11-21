@@ -20,6 +20,7 @@ from urllib.parse import urlsplit
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
+from logo_cache import merge_logos, add_logos_to_playlist, save_registry
 
 CATALOG = Path("docs/rutube.m3u")
 MATCH_REPORT = Path("docs/epg_report.csv")
@@ -217,6 +218,18 @@ def main():
                 errors.append(error)
                 print("WARNING: " + error)
     total_events = sum(len(p) for p in combined.values())
+    # Prevent a transient upstream outage from publishing a sharply reduced EPG.
+    if STATUS.exists():
+        previous = json.loads(STATUS.read_text(encoding="utf-8"))
+        previous_channels = int(previous.get("guide_channels", 0))
+        if previous_channels >= 30 and len(combined) * 100 < previous_channels * 80:
+            raise RuntimeError(
+                "Guide coverage regression: "
+                + str(previous_channels) + " -> " + str(len(combined))
+            )
+
+    provider_logo_count = len(logos)
+    logos, cached_logo_count = merge_logos(logos, ["docs/rutube.m3u"])
     if len(combined) < 20 or total_events < 100:
         raise RuntimeError(
             f"Refusing to publish insufficient guide: "
@@ -258,29 +271,20 @@ def main():
     # Publish both XMLTV transports: plain XML maximizes TV-player compatibility.
     Path("docs/guide.xml").write_bytes(document)
     OUTPUT.write_bytes(gzip.compress(document, compresslevel=8, mtime=0))
-    # Add matching logo URLs to M3U, not just XMLTV: more reliable for TVs.
-    m3u_path = Path("docs/rutube.m3u")
-    raw_lines = m3u_path.read_text(encoding="utf-8").splitlines()
-    added_logos = 0
-    for idx, line in enumerate(raw_lines):
-        if not line.startswith("#EXTINF:") or "tvg-logo=" in line:
-            continue
-        found = re.search(r'tvg-id="(rtv\.[0-9a-f]{32})"', line)
-        logo_url = logos.get(found.group(1)) if found else None
-        if logo_url:
-            before, sep, after = line.partition(",")
-            if sep:
-                raw_lines[idx] = before + ' tvg-logo="' + logo_url + '",' + after
-                added_logos += 1
-    if added_logos:
-        m3u_path.write_text("\n".join(raw_lines) + "\n", encoding="utf-8")
+    # Persistent IDs prevent provider or EPG changes from removing old logos.
+    logo_counts = {}
+    for filename in ["docs/rutube.m3u"]:
+        logo_counts[filename] = add_logos_to_playlist(filename, logos)
+    save_registry(logos)
     report = {
         "updated_at": now.isoformat(),
         "catalog_channels": len(channels),
         "guide_channels": len(combined),
         "programmes": len(parsed.findall("programme")),
-        "provider_logo_count": len(logos),
-        "added_to_m3u": added_logos,
+        "provider_logo_count": provider_logo_count,
+        "cached_logo_count": cached_logo_count,
+        "logo_registry_count": len(logos),
+        "added_to_m3u": logo_counts["docs/rutube.m3u"],
         "compressed_bytes": OUTPUT.stat().st_size,
         "uncompressed_bytes": Path("docs/guide.xml").stat().st_size,
         "feeds": sources,
