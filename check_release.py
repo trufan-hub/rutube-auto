@@ -104,6 +104,14 @@ def main():
                      and item.findtext("title")), "Incomplete programme")
         active.add(ident)
     require(len(active) >= 50, "EPG has fewer than 50 scheduled channels")
+    description_count = sum(
+        1 for item in programmes if (item.findtext("desc") or "").strip()
+    )
+    # A loss of descriptions is a regression, not a valid playlist update.
+    require(
+        description_count >= max(100, len(programmes) // 5),
+        "Descriptions disappeared or sharply decreased from EPG"
+    )
 
     status = json.loads((ROOT / "epg_status.json").read_text(encoding="utf-8"))
     require(status.get("catalog_channels") == len(primary),
@@ -112,6 +120,8 @@ def main():
             "EPG report has different programme channel count")
     require(status.get("programmes") == len(programmes),
             "EPG report has different programme count")
+    require(status.get("descriptions") == description_count,
+            "EPG report does not match description count")
     updated_at = datetime.fromisoformat(status["updated_at"])
     age = (datetime.now(timezone.utc) - updated_at).total_seconds()
     require(0 <= age < 3 * 3600, "Generated EPG is not current")
@@ -119,6 +129,7 @@ def main():
         "result": "PASS", "project": HOME,
         "channels": len(primary), "guide_channels": len(active),
         "programmes": len(programmes),
+        "descriptions": description_count,
         "logos_in_registry": len(logo_registry),
         "logos_in_playlist": sum(bool(x) for x in primary.values()),
         "EPG": EPG_URL
