@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build a playlist-specific XMLTV guide published by this repository.
 
-Only programme start/end times and titles are retained from public EPG feeds.
+Keep titles, synopses, sub-titles and genres when supplied by XMLTV feeds.
 No EPG data is fabricated. An invalid or empty guide fails the workflow
 before publication, preserving the last successful GitHub Pages deployment.
 """
@@ -177,9 +177,29 @@ def parse_provider(stream, channels, utc_date, provider):
                 name = ("".join(node.itertext()).strip()
                         if node is not None else "")
                 if name and len(name) <= 500:
-                    found_programmes[target].append(
-                        (beginning, finish, name, node.get("lang") or "")
+                    # Preserve actual programme metadata; never invent synopses.
+                    desc_node = el.find("desc")
+                    description = (
+                        re.sub(r"\s+", " ", "".join(desc_node.itertext())).strip()[:5000]
+                        if desc_node is not None else ""
                     )
+                    subtitle_node = el.find("sub-title")
+                    subtitle = (
+                        re.sub(r"\s+", " ", "".join(subtitle_node.itertext())).strip()[:500]
+                        if subtitle_node is not None else ""
+                    )
+                    categories = tuple(
+                        (re.sub(r"\s+", " ", "".join(cat.itertext())).strip()[:150],
+                         cat.get("lang") or "")
+                        for cat in el.findall("category")[:5]
+                        if "".join(cat.itertext()).strip()
+                    )
+                    found_programmes[target].append((
+                        beginning, finish, name, node.get("lang") or "",
+                        description, desc_node.get("lang") or "" if desc_node is not None else "",
+                        subtitle, subtitle_node.get("lang") or "" if subtitle_node is not None else "",
+                        categories
+                    ))
             el.clear()
             root.clear()
     return found_programmes, total_channels, found_icons
@@ -205,6 +225,26 @@ def main():
                     if cid not in combined and entries:
                         combined[cid] = entries
                         added += 1
+                    elif cid in combined and entries:
+                        # Supplement missing descriptions from another feed only
+                        # when BOTH airtime and title agree; never mismatch shows.
+                        by_airing = defaultdict(list)
+                        for candidate in entries:
+                            by_airing[(candidate[0][:14], normalize(candidate[2]))].append(candidate)
+                        for index, existing in enumerate(combined[cid]):
+                            if existing[4]:
+                                continue
+                            matches = by_airing.get(
+                                (existing[0][:14], normalize(existing[2])), []
+                            )
+                            if len(matches) == 1 and matches[0][4]:
+                                supplement = matches[0]
+                                combined[cid][index] = (
+                                    existing[:4] + supplement[4:6]
+                                    + (existing[6] or supplement[6],
+                                       existing[7] or supplement[7],
+                                       existing[8] or supplement[8])
+                                )
                 sources[label] = {
                     "url": url, "source_channels": count,
                     "matched_channels": len(programmes),
@@ -250,7 +290,9 @@ def main():
             ET.SubElement(el, "icon", {"src": logos[ident]})
     for cid, entries in combined.items():
         seen = set()
-        for start, stop, title, lang in sorted(entries):
+        for (start, stop, title, lang, description, desc_lang,
+             subtitle, subtitle_lang, categories) in sorted(
+                entries, key=lambda row: (row[0], row[1], row[2])):
             key = (start, stop, title)
             if key in seen:
                 continue
@@ -262,6 +304,18 @@ def main():
                 el, "title", {"lang": lang or "ru"}
             )
             title_el.text = title
+            if subtitle:
+                ET.SubElement(
+                    el, "sub-title", {"lang": subtitle_lang or lang or "ru"}
+                ).text = subtitle
+            if description:
+                ET.SubElement(
+                    el, "desc", {"lang": desc_lang or lang or "ru"}
+                ).text = description
+            for category, cat_lang in categories:
+                ET.SubElement(
+                    el, "category", {"lang": cat_lang or lang or "ru"}
+                ).text = category
     document = ET.tostring(tv, encoding="utf-8", xml_declaration=True)
     # Validate the exact bytes which will be served as XMLTV.
     parsed = ET.fromstring(document)
@@ -281,6 +335,9 @@ def main():
         "catalog_channels": len(channels),
         "guide_channels": len(combined),
         "programmes": len(parsed.findall("programme")),
+        "descriptions": len(parsed.findall("programme/desc")),
+        "subtitles": len(parsed.findall("programme/sub-title")),
+        "genres": len(parsed.findall("programme/category")),
         "provider_logo_count": provider_logo_count,
         "cached_logo_count": cached_logo_count,
         "logo_registry_count": len(logos),
