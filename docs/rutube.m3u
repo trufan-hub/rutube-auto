@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://trufan-hub.github.io/rutube-auto/guide.xml"
-# Generated (UTC): 2026-11-21 20:14; source: Dimonovich/TV
+# Generated (UTC): 2026-11-22 01:08; source: Dimonovich/TV
 # EPG requires a matching programme in the provider feed.
 #EXTINF:-1 tvg-id="rtv.9ae8e8a6dc58bdad66190475f9872ecd" tvg-name="Rutube TV" group-title="Rutube" tvg-logo="https://iptvx.one/picons/rutube-tv.png",Rutube TV
 #EXTVLCOPT:http-user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
