@@ -43,7 +43,7 @@ TLC,rtv.7c3d1a4cc0b4dff1176aa2dbb0b90000,yes,IPTVX:exact_name
 Apple TV+Action Time,rtv.74bb437ef478a52f42198c50d4241dc7,no,no_current_programme
 Драматические фильмы,rtv.680dfe110840cf882437082b948578d6,no,no_current_programme
 Epic Media Love,rtv.21f3993ed8291b70208aa06c982c731f,yes,IPTVX:exact_name
-Epic Media Plus,rtv.0ed0696149c131d3a7349372d730d4e6,yes,IPTVX:exact_name
+Epic Media Plus,rtv.0ed0696149c131d3a7349372d730d4e6,yes,cached_previous_match
 Amazon Prime Video mans' club,rtv.99f8f1d827641b766de62fe9023642fa,no,no_current_programme
 Звездные войны,rtv.dcd36c7833f9431e6e6c902515c6c3ac,no,no_current_programme
 Гарри Поттер,rtv.f6a3656e5ef574982994ddf2e5003341,no,no_current_programme
@@ -129,12 +129,14 @@ UTV,rtv.673b559e08f8b99d65a4e8fbbceb911b,yes,IPTVX:exact_name
 Наше Аниме,rtv.ec5267347fa50d03edba227906eba679,no,no_current_programme
 Рика и Морти,rtv.478a825bfd784e1e9de08ceceb3d2121,no,no_current_programme
 Анимач,rtv.b3019a8983105f5e33f038246f860c32,no,no_current_programme
+Ретро аниме,rtv.5cc3ad508ccf825b275c2815ba05d2f7,no,no_current_programme
 Мультимейшин,rtv.bc2933d28daf33f5a68257ebc72787cd,no,no_current_programme
 Мультач,rtv.76de13007ff82a001f786f148e9fd39a,no,no_current_programme
 Радость моя,rtv.9ad2099eed71b4a0e577292c3bfd0708,yes,IPTVX:exact_name
 Мультаташечки,rtv.25a96d214a176541fba1d342ac760ee9,no,no_current_programme
 Смайлик ТВ,rtv.2f052691c75d72b3ed7f3c33ea956a41,yes,IPTVX:exact_name
 Солнце,rtv.2dba20a8405e57935827cb5721c2b759,yes,IPTVX:exact_name
+Cartoon Network,rtv.d2119cfb95146b3983cf05c1fe35e66f,yes,IPTVX:exact_name
 Ключайка,rtv.ed497bdb28846536f3928849f8f7e469,no,no_current_programme
 Музыкальные клипы,rtv.e7e04192431a24a750fd8704fa221461,no,no_current_programme
 Смотри Радио,rtv.18eda61a347b781dd765b410133ef33a,no,no_current_programme
