@@ -13,7 +13,7 @@ Rutube TV,rtv.9ae8e8a6dc58bdad66190475f9872ecd,no,no_current_programme
 Суббота!,rtv.310744c10a5809da38aa445c952976da,yes,IPTVX:verified_id
 Ю,rtv.5c9327074e25ca86f3111d4085cbbb65,yes,IPTVX:exact_name
 CGTN Русский,rtv.f785d738a845cc80658e887843a18ed9,yes,IPTVX:exact_name
-Нано ТВ,rtv.cf958b6c9ae4504be5fc2c1de358a017,no,no_current_programme
+Нано ТВ,rtv.cf958b6c9ae4504be5fc2c1de358a017,yes,IPTVX:exact_name
 Вдох,rtv.988ec7330fa38c8a1e5980ba7d02dbbe,no,no_current_programme
 Охотник и рыболов,rtv.1da5d92af8c55b16241f1eb12a27f00c,yes,EPG.ONE:exact_name
 Документалки и шоу,rtv.eddcc86d1dee0b5def546ea388eb38ea,no,no_current_programme
@@ -108,21 +108,21 @@ UTV,rtv.673b559e08f8b99d65a4e8fbbceb911b,yes,IPTVX:exact_name
 ННТВ,rtv.333f94ef9af118c0ac51006243053e07,yes,IPTVX:exact_name
 МТВ Волгоград,rtv.1839496ed8242ed47f5c540e25d4ba3f,yes,IPTVX:exact_name
 Енисей +4 (Орион),rtv.5835cd10c04311e400f2ed19b1b2fe8b,yes,EPG.ONE:exact_name
-БСТ,rtv.92aa15b4975d9f63c4e0b82e3b7af463,yes,IPTVX:exact_name
-Юрган,rtv.601ca3d760de90391c18772e43d5190e,yes,IPTVX:exact_name
+БСТ,rtv.92aa15b4975d9f63c4e0b82e3b7af463,yes,EPG.ONE:exact_name
+Юрган,rtv.601ca3d760de90391c18772e43d5190e,yes,cached_previous_match
 Царьград,rtv.91815da4edb167b5bd617bae490e57da,no,no_current_programme
 Омск ТВ,rtv.9927a61345cbec5aac6558f6c5454d61,yes,IPTVX:exact_name
 ТБВ,rtv.68b2533a29f7de163842baf1b9dfc17e,no,no_current_programme
 Мир Белогорья,rtv.31bd9a668e5dfe5feddb988c96c0998c,yes,IPTVX:exact_name
 Ямал-Регион,rtv.c0de1d61969a7fbdf6c68ca0b8a67769,yes,IPTVX:exact_name
 БТВ,rtv.671239d68ada3000a154a68efa0c7813,no,no_current_programme
-Магас,rtv.15bb032337c7425983757d211713eb7d,no,no_current_programme
+Магас,rtv.15bb032337c7425983757d211713eb7d,yes,IPTVX:exact_name
 Первый Ярославский,rtv.b7d879feefadde4e04e516dde89012cd,yes,IPTVX:exact_name
 ОТР,rtv.faa934385b83f9e8a92f5484defae5fa,yes,IPTVX:exact_name
 Истоки Орёл,rtv.503a8ac5ca6d738f05a147764f70215b,no,no_current_programme
 360,rtv.07beff61e617797db550cc3a5f6ad92b,yes,IPTVX:exact_name
 Прима,rtv.3fd26103b82508289ef7b7f60c77d9c8,yes,IPTVX:exact_name
-АСТВ,rtv.df0faa92ca3f1d7df057c202fd4b21c4,no,no_current_programme
+АСТВ,rtv.df0faa92ca3f1d7df057c202fd4b21c4,yes,IPTVX:exact_name
 10 канал,rtv.c9e26bf5c003fd8d477200065ca1a05f,no,no_current_programme
 Канал 12,rtv.7d6d8c8fc5c6e02d9c0b78eb451f3bd0,no,no_current_programme
 Спас,rtv.2bbfa9ebf9d79ade480d7281fcef1008,yes,IPTVX:exact_name
@@ -171,7 +171,7 @@ Red Bull TV,rtv.45b30eef1b89857182b03db2c25631d9,no,no_current_programme
 NBA TV,rtv.d01241e9fd2bc2d65dbf6d74cca02f89,yes,IPTVX:exact_name
 SKY SPORTS CRICKET,rtv.7c13a51576b9ff2601f08f5d57dd5169,yes,IPTVX:exact_name
 Sky Sports Golf,rtv.a7a17d6b994f02a80aebd69435266b58,yes,IPTVX:exact_name
-Sky Sports Premier League,rtv.e5bacac3b8e730791d4cab20ae81cd8f,yes,IPTVX:exact_name
+Sky Sports Premier League,rtv.e5bacac3b8e730791d4cab20ae81cd8f,yes,cached_previous_match
 Sky Sports Racing,rtv.362d68a2d5d5b48dbf23522573e64d57,yes,IPTVX:exact_name
 Sky Sports Tennis,rtv.5f5dc9d64b43dfc740e92f2bdf2b0d38,yes,IPTVX:exact_name
 Sports Grid,rtv.afc3073ec3efc6cb70c88ce6acaf4344,no,no_current_programme
