@@ -107,8 +107,8 @@ UTV,rtv.673b559e08f8b99d65a4e8fbbceb911b,yes,IPTVX:exact_name
 ННТВ,rtv.333f94ef9af118c0ac51006243053e07,yes,IPTVX:exact_name
 МТВ Волгоград,rtv.1839496ed8242ed47f5c540e25d4ba3f,yes,IPTVX:exact_name
 Енисей +4 (Орион),rtv.5835cd10c04311e400f2ed19b1b2fe8b,yes,EPG.ONE:exact_name
-БСТ,rtv.92aa15b4975d9f63c4e0b82e3b7af463,yes,EPG.ONE:exact_name
-Юрган,rtv.601ca3d760de90391c18772e43d5190e,yes,cached_previous_match
+БСТ,rtv.92aa15b4975d9f63c4e0b82e3b7af463,yes,IPTVX:exact_name
+Юрган,rtv.601ca3d760de90391c18772e43d5190e,yes,IPTVX:exact_name
 Царьград,rtv.91815da4edb167b5bd617bae490e57da,no,no_current_programme
 Омск ТВ,rtv.9927a61345cbec5aac6558f6c5454d61,yes,IPTVX:exact_name
 ТБВ,rtv.68b2533a29f7de163842baf1b9dfc17e,no,no_current_programme

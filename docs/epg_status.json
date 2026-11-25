@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-11-25T07:25:20.233620+00:00",
+  "updated_at": "2026-11-25T13:25:58.753449+00:00",
   "catalog_channels": 179,
-  "guide_channels": 100,
-  "programmes": 24301,
-  "descriptions": 22106,
+  "guide_channels": 101,
+  "programmes": 24844,
+  "descriptions": 22909,
   "subtitles": 0,
   "genres": 0,
   "provider_logo_count": 99,
   "cached_logo_count": 107,
   "logo_registry_count": 107,
   "added_to_m3u": 107,
-  "compressed_bytes": 1854925,
-  "uncompressed_bytes": 19709311,
+  "compressed_bytes": 1918253,
+  "uncompressed_bytes": 20272596,
   "feeds": {
     "IPTVX": {
       "url": "https://iptvx.one/EPG",
       "source_channels": 4361,
-      "matched_channels": 96,
-      "new_channels": 96
+      "matched_channels": 98,
+      "new_channels": 98
     },
     "EPG.ONE": {
       "url": "https://epg.one/epg2.xml.gz",
       "source_channels": 3214,
       "matched_channels": 58,
-      "new_channels": 4
+      "new_channels": 3
     }
   },
   "warnings": []
