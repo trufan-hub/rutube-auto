@@ -1,17 +1,17 @@
 {
-  "updated_at": "2026-11-24T19:02:49.998067+00:00",
-  "catalog_channels": 180,
+  "updated_at": "2026-11-25T01:18:21.863574+00:00",
+  "catalog_channels": 179,
   "guide_channels": 100,
-  "programmes": 25261,
-  "descriptions": 23117,
+  "programmes": 24299,
+  "descriptions": 22106,
   "subtitles": 0,
   "genres": 0,
   "provider_logo_count": 99,
   "cached_logo_count": 107,
   "logo_registry_count": 107,
   "added_to_m3u": 107,
-  "compressed_bytes": 1907715,
-  "uncompressed_bytes": 20442349,
+  "compressed_bytes": 1854668,
+  "uncompressed_bytes": 19708322,
   "feeds": {
     "IPTVX": {
       "url": "https://iptvx.one/EPG",
@@ -20,13 +20,11 @@
       "new_channels": 96
     },
     "EPG.ONE": {
-      "url": "http://epg.one/epg2.xml.gz",
+      "url": "https://epg.one/epg2.xml.gz",
       "source_channels": 3214,
       "matched_channels": 58,
       "new_channels": 4
     }
   },
-  "warnings": [
-    "EPG.ONE https://epg.one/epg2.xml.gz: ConnectionResetError: [Errno 104] Connection reset by peer"
-  ]
+  "warnings": []
 }
