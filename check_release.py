@@ -3,7 +3,7 @@
 
 Protects stable M3U URLs, all 169+/160+ catalogue entries, XMLTV channel IDs,
 guide freshness/coverage, compressed vs plain guide, and every cached logo.
-No network access and no third-party modules required.
+No network access required; Pillow validates cached images.
 """
 from __future__ import annotations
 import gzip
@@ -14,7 +14,7 @@ from html import unescape
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-from logo_cache import read_registry, safe_logo_url
+from logo_cache import read_registry, safe_logo_url, validate_local_registry
 
 ROOT = Path("docs")
 PLAYLISTS = (
@@ -65,6 +65,7 @@ def parse_playlist(name, logos):
 
 def main():
     logo_registry = read_registry()
+    validate_local_registry(logo_registry)
     require(len(logo_registry) >= 80, "Logo registry contains too few entries")
     playlists = {name: parse_playlist(name, logo_registry) for name in PLAYLISTS}
     primary = playlists[PLAYLISTS[0]]

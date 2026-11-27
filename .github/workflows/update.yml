@@ -10,6 +10,7 @@ on:
       - build.py
       - build_epg.py
       - logo_cache.py
+      - test_logo_cache.py
       - check_release.py
       - .github/workflows/update.yml
 
@@ -25,7 +26,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -37,6 +38,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install image decoder and test persistent logos
+        run: |
+          python -m pip install 'Pillow==12.1.1'
+          python -m unittest test_logo_cache.py
 
       - name: Refresh current Rutube streams and EPG mappings
         run: python build.py
@@ -64,6 +69,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add docs/rutube.m3u docs/epg_report.csv docs/index.html docs/guide.xml docs/guide.xml.gz docs/epg_status.json docs/logos.json
+          if [ -d docs/logos ]; then git add docs/logos/; fi
           if ! git diff --cached --quiet; then
             git commit -m 'Update Rutube streams and EPG mappings'
             git fetch origin main
