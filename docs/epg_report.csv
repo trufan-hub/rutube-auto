@@ -43,7 +43,7 @@ TLC,rtv.7c3d1a4cc0b4dff1176aa2dbb0b90000,yes,IPTVX:exact_name
 Apple TV+Action Time,rtv.74bb437ef478a52f42198c50d4241dc7,no,no_current_programme
 Драматические фильмы,rtv.680dfe110840cf882437082b948578d6,no,no_current_programme
 Epic Media Love,rtv.21f3993ed8291b70208aa06c982c731f,yes,IPTVX:exact_name
-Epic Media Plus,rtv.0ed0696149c131d3a7349372d730d4e6,yes,IPTVX:exact_name
+Epic Media Plus,rtv.0ed0696149c131d3a7349372d730d4e6,yes,cached_previous_match
 Amazon Prime Video mans' club,rtv.99f8f1d827641b766de62fe9023642fa,no,no_current_programme
 Звездные войны,rtv.dcd36c7833f9431e6e6c902515c6c3ac,no,no_current_programme
 Гарри Поттер,rtv.f6a3656e5ef574982994ddf2e5003341,no,no_current_programme
